@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.androidmanifest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,15 +9,15 @@ import com.example.androidmanifest.icons
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var recylerView: RecyclerView
+    private lateinit var RecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recylerView = findViewById(R.id.recylerView)
+        RecyclerView = findViewById(R.id.recylerView)
         val icons = ArrayList<icons>()
-        icons.add(icons(1, "GAMES", R.drawable.ic_baseline_games))
+        icons.add(icons(1, "Games", R.drawable.ic_baseline_games))
         icons.add(icons(2, "MUSICS", R.drawable.ic_baseline_music_note))
         icons.add(icons(3, "FILES", R.drawable.ic_baseline_file_copy))
         icons.add(icons(4, "KEYBOARD", R.drawable.ic_baseline_keyboard))
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
             val adapter = IconAdapter(icons)
 
-        recylerView.adapter = adapter
-        recylerView.layoutManager = LinearLayoutManager(this)
+        RecyclerView.adapter = adapter
+        RecyclerView.layoutManager = LinearLayoutManager(this)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.androidmanifest
 
 import android.view.LayoutInflater
 import android.view.View
